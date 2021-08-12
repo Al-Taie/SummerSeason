@@ -19,46 +19,44 @@
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
+        tools:src="@drawable/ic_launcher_background"
         app:lottie_rawRes="@raw/travel" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_view2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/cardView"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/air_conditioner"
+        tools:src="@drawable/ic_launcher_background"
+        android:alpha="0"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/thermometer"
-        android:alpha="0"/>
+        tools:src="@drawable/ic_launcher_background" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        style="@style/CardView.Style"
-        app:cardCornerRadius="28dp"
-        app:layout_constraintBottom_toBottomOf="parent" >
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp">
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/animation_view3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/fanimation"
-                android:alpha="0"/>
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
