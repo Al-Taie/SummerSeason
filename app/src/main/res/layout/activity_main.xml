@@ -6,11 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-
     app:layoutDescription="@xml/activity_main_scene">
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animation_view"
+        android:id="@+id/animation_travel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,7 +22,7 @@
         app:lottie_rawRes="@raw/travel" />
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animation_view2"
+        android:id="@+id/animation_air_conditioner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="parent"
@@ -36,7 +35,7 @@
         android:alpha="0"/>
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animation_view3"
+        android:id="@+id/animation_thermometer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:alpha="0"
@@ -59,4 +58,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/animation_hello"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:alpha="0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="1"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/hello_summer"
+            tools:src="@drawable/ic_launcher_background" />
+    </LinearLayout>
 </androidx.constraintlayout.motion.widget.MotionLayout>
